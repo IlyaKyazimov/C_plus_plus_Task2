@@ -26,4 +26,6 @@ int main()
     {
         element->print();
     };
+
+    return 0;
 };
