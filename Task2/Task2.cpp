@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include "Atm.h"
 #include "Terminal.h"
-#include <array>
+#include <vector>
 
 int main()
 {
@@ -17,15 +17,25 @@ int main()
     Terminal terminalDiebold = Terminal('N', "000000004", "Diebold");
     SelfServiceDevice* ptrTerminalDiebold = &terminalDiebold;
 
-    std::array<SelfServiceDevice*, 4> array =
+    std::vector<SelfServiceDevice*> vector =
     {
         ptrAtmWincor, ptrAtmNCR, ptrTerminalOpteva, ptrTerminalDiebold
     };
 
-    for (SelfServiceDevice* element : array)
+    /*for (SelfServiceDevice* element : vector)
     {
         element->print();
-    };
+    };*/
+
+    std::vector<SelfServiceDevice*>::iterator iterator;
+
+    iterator = vector.begin();
+
+    while (iterator != vector.end())
+    {
+        (*iterator)->print();
+        ++iterator;
+    }
 
     return 0;
 };
