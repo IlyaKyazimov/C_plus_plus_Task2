@@ -6,11 +6,13 @@
 class Atm: public SelfServiceDevice
 {
 private:
+
 	char m_isEppInstalled;
 	char m_isRecycler;
 
 public:
-	Atm(char isEppInstalled, char isRecycler, std::string luno, std::string producer)
+
+	Atm(const char isEppInstalled, const char isRecycler, const std::string& luno, const std::string& producer)
 		: SelfServiceDevice(luno, producer), m_isEppInstalled(isEppInstalled), m_isRecycler(isRecycler)
 	{
 	};

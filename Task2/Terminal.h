@@ -6,10 +6,12 @@
 class Terminal: public SelfServiceDevice
 {
 private:
+
 	char m_isScannerInstalled;
 
 public:
-	Terminal(char isScannerInstalled, std::string luno, std::string producer)
+
+	Terminal(const char isScannerInstalled, const std::string& luno, const std::string& producer)
 		: SelfServiceDevice(luno, producer), m_isScannerInstalled(isScannerInstalled)
 	{
 	};

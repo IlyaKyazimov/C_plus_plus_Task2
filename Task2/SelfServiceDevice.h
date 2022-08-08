@@ -6,17 +6,19 @@
 class SelfServiceDevice
 {
 protected:
-	std::string m_luno;
-	std::string m_producer;
+
+	const std::string m_luno;
+	const std::string m_producer;
 
 public:
-	SelfServiceDevice(std::string luno, std::string producer);
+
+	SelfServiceDevice(const std::string& luno, const std::string& producer);
 
 	~SelfServiceDevice();
 
-	std::string getLuno() { return m_luno; };
+	const std::string& getLuno() const { return m_luno; };
 	
-	std::string getProducer() { return m_producer; };
+	const std::string& getProducer() const { return m_producer; };
 
 	virtual void print() = 0;
 };
